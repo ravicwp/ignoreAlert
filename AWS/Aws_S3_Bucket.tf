@@ -23,3 +23,18 @@ RestrictPublicBuckets = true
 }
 }
 
+resource "aws_s3_bucket" "Nov3" {
+  bucket = "examplebuckettftest"
+  acl    = "private"
+  versioning {
+    mfa_delete =false
+    enabled = false
+    
+  }
+  PublicAccessBlock{
+BlockPublicAcls = true
+BlockPublicPolicy = true
+IgnorePublicAcls = true
+RestrictPublicBuckets = true
+}
+}
