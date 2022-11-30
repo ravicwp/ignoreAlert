@@ -1,5 +1,3 @@
-
-
 resource "aws_s3_bucket" "nov2" {
   bucket = "30Nov1"
   PublicAccessBlock{
